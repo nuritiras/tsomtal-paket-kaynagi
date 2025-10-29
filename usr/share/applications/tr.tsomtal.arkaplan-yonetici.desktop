@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Arkaplan Yöneticisi
+Name[tr]=Arkaplan Yöneticisi
+Comment=Pardus GNOME Masaüstü Arkaplanını Kilitler
+Comment[tr]=Pardus GNOME Masaüstü Arkaplanını Kilitler
+Exec=/opt/tsomtal-arkaplan-yonetici/arkaplan_yonetici.py
+Icon=tsomtal-arkaplan
+Terminal=false
+Type=Application
+Categories=System;Settings;

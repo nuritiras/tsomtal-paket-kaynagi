@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+
+echo "TSOMTAL Arkaplan Yöneticisi ayarlanıyor..."
+
+# Betiklere çalıştırma izni ver
+chmod +x /opt/tsomtal-arkaplan-yonetici/arkaplan_yonetici.py
+chmod +x /opt/tsomtal-arkaplan-yonetici/arkaplan_helper.sh
+
+# İkon ve Menü önbelleklerini güncelle
+echo "İkon ve Masaüstü önbellekleri güncelleniyor..."
+gtk-update-icon-cache /usr/share/icons/hicolor/ -f
+update-desktop-database -q
+
+exit 0

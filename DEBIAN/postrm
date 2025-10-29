@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+if [ "$1" = "purge" ] || [ "$1" = "remove" ]; then
+    echo "TSOMTAL Arkaplan Yöneticisi kaldırılıyor..."
+    
+    # Olası kilitleri temizle
+    rm -f /etc/dconf/db/local.d/00-arkaplan-ayari
+    rm -f /etc/dconf/db/local.d/locks/arkaplan-kilidi
+    dconf update
+
+    # Önbellekleri güncelle
+    gtk-update-icon-cache /usr/share/icons/hicolor/ -f
+    update-desktop-database -q
+fi
+
+exit 0
